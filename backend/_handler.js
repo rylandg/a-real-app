@@ -1,9 +1,9 @@
 import express from 'express';
 import { defaultHandler } from '@reshuffle/server-function';
-import { authHandler } from '@reshuffle/passport';
+import { authRouter } from '@reshuffle/passport';
 
 const app = express();
-app.use(authHandler);
+app.use(authRouter());
 
 app.use(defaultHandler)
 
