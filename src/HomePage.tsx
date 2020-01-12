@@ -18,6 +18,9 @@ interface HomePageProps {
 
 export const HomePage: FC<HomePageProps> = ({ user }) => {
   const { getLoginURL } = useAuth();
+  if (user) {
+    return <Redirect to='/user-page'/>;
+  }
   return (
     <a href={getLoginURL()}>
       Login

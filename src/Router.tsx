@@ -17,7 +17,7 @@ import { UserPage } from './containers/UserPage';
 import { HomePage } from './HomePage';
 
 const Router: React.FC = () => {
-  const [user, setUser] = useState<User | undefined>(undefined);
+  const [user, setUser] = useState<User | undefined | boolean>(false);
 
   useEffect(() => {
     async function load() {
@@ -27,6 +27,10 @@ const Router: React.FC = () => {
     }
     load();
   }, []);
+
+  if (user === false || user === true) {
+    return null;
+  }
 
   return (
     <Switch>
