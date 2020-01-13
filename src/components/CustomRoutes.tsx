@@ -1,6 +1,5 @@
 import React, {
   FC,
-  createElement,
   ComponentType,
 } from 'react';
 
@@ -14,13 +13,6 @@ import {
 import { User } from '../models/User';
 
 type Comp = ComponentType<RouteComponentProps<any>> | ComponentType<any>;
-
-const renderMergedProps = (component: Comp, ...rest: any) => {
-  const finalProps = { ...rest };
-  return (
-    createElement(component, finalProps)
-  );
-}
 
 interface PropsRouteProps extends RouteProps {
   component: Comp;

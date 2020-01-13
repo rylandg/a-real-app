@@ -1,0 +1,19 @@
+.user-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gallery {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  cursor: pointer;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+}

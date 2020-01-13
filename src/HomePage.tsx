@@ -1,10 +1,7 @@
 import '@reshuffle/code-transform/macro';
 import React, { FC } from 'react';
 
-import {
-  RouteComponentProps,
-  Redirect,
-} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import { useAuth } from '@reshuffle/react-auth';
 
